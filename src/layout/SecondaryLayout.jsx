@@ -1,7 +1,13 @@
 import React from "react";
+import { Outlet } from "react-router-dom";
 
 function SecondaryLayout() {
-  return <div>SecondaryLayout</div>;
+  return (
+    <>
+      <div>Header</div>
+      <Outlet />
+    </>
+  );
 }
 
 export default SecondaryLayout;

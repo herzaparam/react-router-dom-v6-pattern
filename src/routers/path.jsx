@@ -3,23 +3,30 @@ import Landing from "../page/Landing";
 import About from "../page/About";
 import Post from "../page/Post";
 import PostDetail from "../page/Post/PostDetail";
+import MainLayout from "../layout/MainLayout";
 
 let route = [
   {
     path: "/",
-    Component: Landing,
+    element: <MainLayout />,
+    children: [
+      {
+        index: true,
+        element: <Landing />,
+      },
+    ],
   },
   {
     path: "/about",
-    Component: About,
+    element: <About />,
   },
   {
     path: "/post",
-    Component: Post,
+    element: <Post />,
   },
   {
     path: "/post/:id",
-    Component: PostDetail,
+    element: <PostDetail />,
   },
 ];
 
