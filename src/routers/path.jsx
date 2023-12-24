@@ -1,6 +1,8 @@
 import { createBrowserRouter } from "react-router-dom";
 import Landing from "../page/Landing";
 import About from "../page/About";
+import Post from "../page/Post";
+import PostDetail from "../page/Post/PostDetail";
 
 let route = [
   {
@@ -10,6 +12,14 @@ let route = [
   {
     path: "/about",
     Component: About,
+  },
+  {
+    path: "/post",
+    Component: Post,
+  },
+  {
+    path: "/post/:id",
+    Component: PostDetail,
   },
 ];
 
